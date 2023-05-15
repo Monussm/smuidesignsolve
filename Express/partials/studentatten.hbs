@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+            <table>
+            <tr>
+                <th>Student Name</th>
+                <th>Studen Rollno</th>
+                <th>Class</th>
+                <th>Absent</th>
+                <th>Present</th>
+            </tr>
+            {{#each data}}
+            <form action="/attendance" method="post">
+            <tr>
+               <td><input type="text" name="name" value={{name}}></td>
+               <td><input type="text" name="rollno" value={{rollno}}></td>
+               <td><input type="text" name="class" value={{class}}></td>
+               <td><input type="radio" name="radio" value="absent"></td>
+               <td><input type="radio" name="radio" value="present"></td>
+            </tr>
+            </form>
+            <button type="submit">click</button>
+            {{/each}}
+        </table>
+    </div>
+</div>
